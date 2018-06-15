@@ -8,7 +8,7 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "commit": "commit",
+    "--------------------- CI ----------------------": "",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once",
     "--------------------- HOOKS ----------------------": "",
@@ -41,7 +41,9 @@
     "test:coverage": " echo 'Run unit tests and check coverage level' && nyc --check-coverage --reporter=lcovonly --reporter=text --reporter=html npm run test:unit",
     "test": "run-s test:*",
     "-------------------- REPORTING --------------------------": "",
-    "report:coverage": "npm run test:coverage && cat ./coverage-report/lcov.info | coveralls"
+    "report:coverage": "npm run test:coverage && cat ./coverage-report/lcov.info | coveralls",
+    "-------------------- SCRIPTS --------------------------": "",
+    "commit": "commit"
   },
   "nyc": {
     "lines": 100,
