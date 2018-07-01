@@ -26,8 +26,8 @@ before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 
 script:
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then commitlint --from=9ba0865d20976bae14fa9824acfbdb2e5982c3ad; fi && travis_retry npm run test
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then commitlint --from=9ba0865d20976bae14fa9824acfbdb2e5982c3ad; fi && travis_retry npm run report:coverage
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then commitlint --from=master; fi && travis_retry npm run test
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then commitlint --from=master; fi && travis_retry npm run report:coverage
 
 after_success:
   - npm run travis-deploy-once "npm run semantic-release"
